@@ -1,0 +1,83 @@
+<!--
+ * @Author: STATICHIT 2394412110@qq.com
+ * @Date: 2023-11-20 21:23:50
+ * @LastEditors: STATICHIT 2394412110@qq.com
+ * @LastEditTime: 2023-11-20 21:32:32
+ * @FilePath: \面试手写题\04grid布局练习\4.2fr实现等分响应式.html
+ * @Description:repeat+auto-fit+minmax 去掉右侧空白
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="one item">One</div>
+    <div class="two item">Two</div>
+    <div class="three item">Three</div>
+    <div class="four item">Four</div>
+    <div class="five item">Five</div>
+    <div class="six item">Six</div>
+    <div class="seven item">Seven</div>
+    <div class="eight item">Eight</div>
+    <div class="nine item">Nine</div>
+  </div>
+</body>
+<style>
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));/* 注意这里的变化 */
+    grid-gap: 10px 20px;
+    grid-auto-rows: 50px;
+  }
+
+  .item {
+    text-align: center;
+    font-size: 200%;
+    color: white;
+  }
+
+  .one {
+    background-color: #19CAAD;
+  }
+
+  .two {
+    background: #8CC7B5;
+  }
+
+  .three {
+    background: #D1BA74;
+  }
+
+  .four {
+    background: #BEE7E9;
+  }
+
+  .five {
+    background: #E6CEAC;
+  }
+
+  .six {
+    background: #ECAD9E;
+  }
+
+  .seven {
+    background: #BEEDC7;
+  }
+
+  .eight {
+    background: #f77c86;
+  }
+
+  .nine {
+    background: #A0EEE1;
+  }
+</style>
+
+</html>

@@ -1,0 +1,80 @@
+<!--
+ * @Author: STATICHIT 2394412110@qq.com
+ * @Date: 2023-11-20 21:10:29
+ * @LastEditors: STATICHIT 2394412110@qq.com
+ * @LastEditTime: 2023-11-20 21:19:37
+ * @FilePath: \面试手写题\04grid布局练习\基本布局.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="one item">One</div>
+    <div class="two item">Two</div>
+    <div class="three item">Three</div>
+    <div class="four item">Four</div>
+    <div class="five item">Five</div>
+    <div class="six item">Six</div>
+  </div>
+</body>
+<style>
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  .item {
+    text-align: center;
+    font-size: 200%;
+    color: white;
+  }
+
+  .one {
+    background-color: #19CAAD;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .two {
+    background: #8CC7B5;
+    grid-column: 2/4;
+    grid-row: 1/3;
+  }
+
+  .three {
+    background: #D1BA74;
+    grid-column: 1/2;
+    grid-row: 2/5;
+  }
+
+  .four {
+    background: #BEE7E9;
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  .five {
+    background: #E6CEAC;
+    grid-column: 2/3;
+    grid-row: 3/5;
+  }
+
+  .six {
+    background: #ECAD9E;
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+</style>
+
+</html>
