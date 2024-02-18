@@ -2,7 +2,7 @@
  * @Author: STATICHIT 2394412110@qq.com
  * @Date: 2023-11-20 21:23:50
  * @LastEditors: STATICHIT 2394412110@qq.com
- * @LastEditTime: 2023-11-20 21:37:59
+ * @LastEditTime: 2023-12-12 19:20:14
  * @FilePath: \面试手写题\04grid布局练习\4.2fr实现等分响应式.html
  * @Description:repeat+auto-fit+minmax-span-dense 解决空缺问题
    每个网格元素的长度可能不相同，,通过 span 关键字进行设置网格项目的
@@ -50,14 +50,16 @@
   .wrapper,
   .wrapper-1 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/* 注意这里的变化 */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* 注意这里的变化 */
     grid-gap: 10px 20px;
     grid-auto-rows: 50px;
   }
 
   .wrapper-1 {
     margin-top: 200px;
-    grid-auto-flow: row dense;/* 注意这里的变化 */
+    grid-auto-flow: row dense;
+    /* 注意这里的变化 */
   }
 
   .item {

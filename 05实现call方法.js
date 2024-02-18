@@ -20,7 +20,7 @@ let obj={
   name:1
 }
 // 此时调用f函数，并且将this指向obj，传入参数1和2
-f.myCall(obj,1,2)//不传obj，this指向window
+f.myCall(obj,1,2);//不传obj，this指向window
 
 /**
 call做了什么:
@@ -40,3 +40,16 @@ call做了什么:
 
 //在JavaScript中，call方法的作用是将一个函数作为指定对象的方法来调用，
 //并且可以指定函数内部的this指向以及传入参数。
+
+
+//自己手写一遍
+//如果忘记思路了，再看一遍整个视频讲的很清楚https://www.bilibili.com/video/BV16c411Q7VM/?p=6&spm_id_from=pageDriver&vd_source=3e01e797e31c13dcbf5cfdb62e929ccf
+Function.prototype.call2=function(target,args){
+  target=target||window;
+  if(typeof target !== 'object')target=new Object(target)
+  let x=Symbol();
+  target[x]=this;
+  let res=target[x](...args);
+  delete target[x];
+  return res;
+}
